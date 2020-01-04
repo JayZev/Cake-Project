@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+
+.btn-list-group {
+    position: relative;
+}
+.btn-list-area {
+    display:none;
+    position: absolute;
+    left:0;
+    right:0;
+}
+.btn-list-group:hover .btn-list-area {
+  display: block; 
+  background-color:#ffffff;
+}
+.btn {
+    display: inline-block;
+    padding: .4em .7em;
+    text-align: center;
+    line-height: 1.5;
+    border: 0px solid ;
+    cursor: pointer;
+    width: 90px;
+
+}
+
+.ok{
+visibility: hidden;                                                                                                      display: none; 这种会脱离文档流;
+}
+
+.error{
+visibility:visible;
+color: red;
+
+}
+
+
+

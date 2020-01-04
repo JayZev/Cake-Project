@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>登录注册</title>
+<!-- Meta tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<!-- Meta tags -->
+<!--stylesheets-->
+<link href="css/style.css" rel='stylesheet' type='text/css' media="all">
+<!--//style sheet end here-->
+<link
+	href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700"
+	rel="stylesheet">
+<script src="WEB-INF/lib/jquery-1.9.1.js"></script>
+<script>
+	addEventListener("load", function() {
+		setTimeout(hideURLbar, 0);
+	}, false);
+	function hideURLbar() {
+		window.scrollTo(0, 1);
+	}
+</script>
+
+<script type="text/javascript" src="js/register.js"></script>
+</head>
+<body>
+	<div class="mid-class">
+		<div class="art-right-w3ls">
+			<!-- 登录表单 -->
+			<h2>登录&注册</h2>
+			<form action="LoginServlet" method="post">
+				<div class="main">
+					<div class="form-left-to-w3l">
+						<input type="text" name="name" placeholder="用户名/手机号码" required="">
+					</div>
+					<div class="form-left-to-w3l ">
+						<input type="password" name="password" placeholder="密码"
+							required="">
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="left-side-forget">
+					<input type="checkbox" class="checked"> <span
+						class="remenber-me">记住密码</span>
+				</div>
+				<div class="right-side-forget">
+					<a href="#" class="for">忘记密码？</a>
+				</div>
+				<div class="clear"></div>
+				<div class="btnn">
+					<button type="submit">登录</button>
+				</div>
+			</form>
+			
+			
+			
+			<!-- 注册表单 -->
+			<div class="w3layouts_more-buttn">
+				<h3>
+					没有账号？ <a href="#content1">在此注册 </a>
+				</h3>
+			</div>
+			
+			
+			<div id="content1" class="popup-effect">
+				<div class="popup">
+					<!--login form-->
+					<div class="letter-w3ls">
+						<!-- 当触发提交事件时调用validateForm()方法  -->
+						<form action="RegServlet" method="post" name="from2" οnsubmit="return validateForm()">
+							<div class="form-left-to-w3l" id="div1">
+								<input type="text" name="Reg_name" class="name1" placeholder="用户名" onBlur="checkUsername(this)">
+								<div class="errorText"><span id="username_span">*用户名由3-5个字符组成</span></div>
+							</div>
+							<div class="form-left-to-w3l">
+								<input type="text" name="Reg_mobile" class="phone"
+									placeholder="手机号码" required="" id="Reg_phone" onBlur="checkUserphone(this)">
+								<div class="errorText"><span id="userphone_span">*请输入11位手机号码</span></div>
+							</div>
+							<div class="form-left-to-w3l">
+								<input type="password" name="Reg_password1" class="password1" id="Reg_pwd1"
+									placeholder="密码" required="" onBlur="checkPassword(this)">
+								<div class="errorText"><span id="password_span">*请输入6-12位密码</span></div>
+							</div>
+							<div class="form-left-to-w3l margin-zero">
+								<input type="password" name="Reg_password2" class="password2" id="Reg_pwd2"
+									placeholder="确认密码" required="" onBlur="checkRePassword(this)">
+								<div class="errorText"><span id="rePassword_span">*两次密码不一致</span></div>
+							</div>
+							<div class="form-left-to-w3l">
+								<label><input type="radio" name="Reg_sex" value="男" checked/>男</label>
+								<label><input type="radio" name="Reg_sex" value="女" />女</label>
+								<div class="errorText"></div>
+							</div>
+							<div class="form-left-to-w3l">
+								<input type="text" name="Reg_address" class="address"
+									placeholder="地址" required="" id="address">
+								<div class="errorText"></div>
+							</div>
+							<div class="btnn">
+								<button type="submit">注册</button>
+								<br>
+							</div>
+						</form>
+						<div class="clear"></div>
+					</div>
+					<!--//login form-->
+					<a class="close" href="#">&times;</a>
+				</div>
+			</div>
+			
+			
+			
+		</div>
+	</div>
+	<footer class="bottem-wthree-footer"> </footer>
+</body>
+</html>
